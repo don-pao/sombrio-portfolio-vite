@@ -42,7 +42,7 @@ const Projects = () => {
       desc: "Smart community issue reporter for quick resolution of civic problems. Built using ServiceNow.",
       tech: "ServiceNow / Mobile",
       color: "var(--neon-pink)",
-      link: "/src/projects/barangay-fix.html"
+      link: "/projects/barangay-fix.html"
     },
     {
       title: "MM Boxing Academy",
@@ -50,7 +50,7 @@ const Projects = () => {
       tech: "E-Commerce / Legacy",
       color: "#555",
       // File path for internal page
-      link: "/src/projects/mm-boxing.html"
+      link: "/projects/mm-boxing.html"
     },
     {
       title: "FitMe",
@@ -58,7 +58,7 @@ const Projects = () => {
       tech: "Mobile / Health Tech",
       color: "var(--neon-cyan)",
       // File path for internal page
-      link: "/src/projects/fit-me.html" 
+      link: "/projects/fit-me.html" 
     }
   ];
 
