@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Archive | MM Boxing Academy</title>
+    <style>
+        /* Cyberpunk Theme Colors (Red/Black Focus) */
+        :root {
+            --primary-bg: #0A0A0A; /* Deep Black Background */
+            --secondary-bg: #1A1A1A; /* Slightly lighter background for panels */
+            --neon-red: #FF073A; /* Primary Neon Accent (Aggressive Red) */
+            --neon-pink: #FF00FF; /* Secondary Neon Accent */
+            --text-light: #F0F0F0;
+            --text-muted: #A0A0A0;
+            --font-mono: 'Space Mono', 'Courier New', monospace;
+        }
+
+        /* --- 1. GENERAL STYLES --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--primary-bg);
+            color: var(--text-light);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: var(--neon-red);
+            font-family: var(--font-mono);
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px rgba(255, 0, 0, 0.4); /* Red glow */
+        }
+
+        /* --- 2. HEADER / HERO SECTION --- */
+        header {
+            text-align: center;
+            padding: 80px 20px 40px;
+            border-bottom: 2px solid var(--secondary-bg);
+        }
+
+        .status-badge {
+            display: inline-block;
+            background-color: var(--neon-red);
+            color: var(--primary-bg);
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.6); /* Red badge glow */
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 0 0 10px 0;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* --- 3. METADATA GRID (The Specs) --- */
+        .project-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 30px 40px;
+            margin-bottom: 40px;
+            background-color: var(--secondary-bg);
+            border-radius: 5px;
+            border: 1px solid rgba(255, 0, 0, 0.2); /* Red border accent */
+        }
+
+        .meta-item h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: var(--neon-pink); /* Using pink for labels for contrast */
+            margin-bottom: 5px;
+        }
+
+        .meta-item p {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin: 0;
+            color: var(--text-light);
+        }
+
+        /* --- 4. MAIN CONTENT & STORY --- */
+        .project-story {
+            max-width: 900px;
+            margin: 0 auto 60px auto;
+        }
+
+        .project-story h2 {
+            margin-top: 40px;
+            font-size: 2rem;
+            border-left: 3px solid var(--neon-red); /* Red left border */
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .project-story p, .project-story ul {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            padding-left: 15px;
+        }
+        
+        .project-story ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .project-story li {
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        
+        .project-story li::before {
+            content: '>';
+            color: var(--neon-red); /* Red bullets */
+            position: absolute;
+            left: 0;
+        }
+
+        /* --- 5. SCREENSHOT GALLERY --- */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr; 
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* Enforce two columns for the two required slots on larger screens */
+        @media (min-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .gallery-item {
+            background: var(--secondary-bg);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.1); /* Red shadow accent */
+            border: 1px solid rgba(255, 0, 0, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--neon-red);
+            margin-top: 10px;
+            font-family: var(--font-mono);
+        }
+
+        /* --- 6. FOOTER --- */
+        .back-link {
+            display: block;
+            text-align: center;
+            margin: 50px 0;
+            text-decoration: none;
+            color: var(--neon-red);
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .back-link:hover {
+            color: var(--neon-pink);
+            text-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <span class="status-badge">ARCHIVED // E-COMMERCE</span>
+            <h1>MM Boxing Academy</h1>
+            <p class="tagline">Digitalizing Combat Sports Training and Enrollment</p>
+        </header>
+
+        <section class="project-meta">
+            <div class="meta-item">
+                <h3>Role</h3>
+                <p>Website Designer & Builder</p>
+            </div>
+            <div class="meta-item">
+                <h3>Platform</h3>
+                <p>Wix (Editor X)</p>
+            </div>
+            <div class="meta-item">
+                <h3>Key Focus</h3>
+                <p>Brand Identity & UX</p>
+            </div>
+            <div class="meta-item">
+                <h3>Status</h3>
+                <p>Discontinued</p>
+            </div>
+        </section>
+
+        <section class="project-story">
+            <h2>// CONTEXT: PROBLEM & OBJECTIVE</h2>
+            <p>MM Boxing Academy needed a professional, aggressive online presence that matched the intensity of the gym. The goal was to consolidate class scheduling, membership sign-ups, and merchandise sales into one easy-to-manage platform.</p>
+            
+            <h2>// SOLUTION EXECUTION</h2>
+            <p>This project was fully developed using the **Wix** platform, leveraging its e-commerce and booking capabilities. The design focused on large, high-impact visuals and the use of the academy's signature red and black palette to convey power and discipline. The Wix editor was chosen for rapid development and ease of client handoff.</p>
+            
+            <h3>KEY FEATURES</h3>
+            <ul>
+                <li>Integrated class scheduling and booking system.</li>
+                <li>E-commerce store for branded apparel.</li>
+                <li>Mobile-first design for gym-goers on the move.</li>
+            </ul>
+        </section>
+
+        <section class="gallery">
+            
+            <div class="gallery-item">
+                <img src="/mm-boxing-images/booking-screenshot-1.png" alt="MMBA Home Page Screenshot"> 
+                <div class="caption">The Homepage Contact ANd Programs Secttion</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/mm-boxing-images/booking-screenshot-2.png" alt="MMBA Booking System Screenshot">
+                <div class="caption">E-Commerce View & Profile View</div>
+            </div>
+
+        </section>
+
+        <a href="index.html" class="back-link">← // RETURN TO PORTFOLIO //</a>
+
+    </div>
+
+</body>
+</html>

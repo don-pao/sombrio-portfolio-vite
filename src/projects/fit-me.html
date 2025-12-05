@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Archive | FIT Me</title>
+    <style>
+        /* Blue/White Technical Theme Colors */
+        :root {
+            --primary-bg: #0C1014; /* Very Dark Background */
+            --secondary-bg: #151A1F; /* Panel Background */
+            --neon-blue: #00BFFF; /* Primary Neon Accent (Deep Sky Blue) */
+            --neon-white: #FFFFFF; /* Secondary Accent (Pure White) */
+            --text-light: #F0F0F0;
+            --text-muted: #A0A0A0;
+            --font-mono: 'Space Mono', 'Courier New', monospace;
+        }
+
+        /* --- 1. GENERAL STYLES --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--primary-bg);
+            color: var(--text-light);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: var(--neon-blue);
+            font-family: var(--font-mono);
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px rgba(0, 191, 255, 0.4); /* Blue glow */
+        }
+
+        /* --- 2. HEADER / HERO SECTION --- */
+        header {
+            text-align: center;
+            padding: 80px 20px 40px;
+            border-bottom: 2px solid var(--secondary-bg);
+        }
+
+        .status-badge {
+            display: inline-block;
+            background-color: var(--neon-white);
+            color: var(--primary-bg);
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* White badge glow */
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 0 0 10px 0;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* --- 3. METADATA GRID (The Specs) --- */
+        .project-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 30px 40px;
+            margin-bottom: 40px;
+            background-color: var(--secondary-bg);
+            border-radius: 5px;
+            border: 1px solid rgba(0, 191, 255, 0.2); /* Blue border accent */
+        }
+
+        .meta-item h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: var(--neon-white); 
+            margin-bottom: 5px;
+        }
+
+        .meta-item p {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin: 0;
+            color: var(--text-light);
+        }
+
+        /* --- 4. MAIN CONTENT & STORY --- */
+        .project-story {
+            max-width: 900px;
+            margin: 0 auto 60px auto;
+        }
+
+        .project-story h2 {
+            margin-top: 40px;
+            font-size: 2rem;
+            border-left: 3px solid var(--neon-blue); /* Blue left border */
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .project-story p, .project-story ul {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            padding-left: 15px;
+        }
+        
+        .project-story ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .project-story li {
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        
+        .project-story li::before {
+            content: '>';
+            color: var(--neon-blue); /* Blue bullets */
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Note about discontinuation */
+        .note-box {
+            background-color: #000F22;
+            border: 1px solid var(--neon-blue);
+            padding: 15px;
+            margin-top: 30px;
+            border-radius: 5px;
+            color: var(--neon-white);
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+        }
+
+
+        /* --- 5. SCREENSHOT GALLERY (STACKED IMAGES) --- */
+        .gallery {
+            display: grid;
+            /* Force single column for all sizes */
+            grid-template-columns: 1fr; 
+            gap: 40px; /* Increased gap between large stacked images */
+            margin-bottom: 60px;
+        }
+
+        /* No media query needed here, as we want them stacked vertically on all screens */
+
+        .gallery-item {
+            background: var(--secondary-bg);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 191, 255, 0.1); 
+            border: 1px solid rgba(0, 191, 255, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--neon-blue);
+            margin-top: 10px;
+            font-family: var(--font-mono);
+        }
+
+        /* --- 6. FOOTER --- */
+        .back-link {
+            display: block;
+            text-align: center;
+            margin: 50px 0;
+            text-decoration: none;
+            color: var(--neon-blue);
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .back-link:hover {
+            color: var(--neon-white);
+            text-shadow: 0 0 5px rgba(0, 191, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <span class="status-badge">ARCHIVED // HEALTH-TECH</span>
+            <h1>FIT Me Mobile Application</h1>
+            <p class="tagline">Personalized Fitness and Health Metric Tracker</p>
+        </header>
+
+        <section class="project-meta">
+            <div class="meta-item">
+                <h3>Backend</h3>
+                <p>Java (REST API)</p>
+            </div>
+            <div class="meta-item">
+                <h3>Mobile OS</h3>
+                <p>Kotlin (Android Native)</p>
+            </div>
+            <div class="meta-item">
+                <h3>Integrations</h3>
+                <p>Google Login / Native Calendar</p>
+            </div>
+            <div class="meta-item">
+                <h3>Type</h3>
+                <p>School Capstone</p>
+            </div>
+        </section>
+
+        <section class="project-story">
+            <h2>// CONTEXT: MOBILE DESIGN CHALLENGE</h2>
+            <p>FIT Me was a school capstone project aimed at building a robust, full-stack mobile application that handled user authentication, workout logging, and progress visualization. The primary goal was to demonstrate proficiency in native mobile development practices and backend API design.</p>
+            
+            <h2>// SOLUTION EXECUTION</h2>
+            <p>The application utilized **Kotlin** for the native Android frontend, ensuring high performance and access to device features like the **native Calendar** for scheduling workouts. The core business logic and database connectivity were handled by a separate **Java**-based RESTful API server. **Google Login** was integrated for fast, secure user onboarding.</p>
+            
+            <h3>KEY FEATURES</h3>
+            <ul>
+                <li>Secure **Google OAuth** for quick sign-in.</li>
+                <li>Seamless integration with native phone calendars.</li>
+                <li>Dynamic data visualization of progress and goals.</li>
+            </ul>
+            
+            <div class="note-box">
+                **[PROJECT STATUS NOTE]** This project was fully functional but was discontinued after the school term due to the ongoing **server and deployment fees** required to maintain the Java backend API.
+            </div>
+        </section>
+
+        <section class="gallery">
+            
+            <div class="gallery-item">
+                <img src="/fit-me-images/dashboard-main.png" alt="FIT Me Dashboard Screenshot"> 
+                <div class="caption">// PICTURE 1: Main User Dashboard</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/fit-me-images/workout-log.png" alt="FIT Me Workout Logging Screen">
+                <div class="caption">// PICTURE 2: Workout Logging and Tracking</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/fit-me-images/progress-calendar.png" alt="FIT Me Progress/Calendar View">
+                <div class="caption">// PICTURE 3: Native Calendar Integration</div>
+            </div>
+
+        </section>
+
+        <a href="index.html" class="back-link">← // RETURN TO PORTFOLIO //</a>
+
+    </div>
+
+</body>
+</html>

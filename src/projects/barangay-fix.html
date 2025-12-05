@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Archive | The Barangay Fix</title>
+    <style>
+        /* Cyberpunk Theme Colors */
+        :root {
+            --primary-bg: #0D181F; /* Deep Dark Background */
+            --secondary-bg: #1A2B3A; /* Slightly lighter background for panels */
+            --neon-pink: #FF00FF; /* Primary Neon Accent */
+            --neon-cyan: #00FFFF; /* Secondary Neon Accent */
+            --text-light: #E0E0E0;
+            --text-muted: #868C8F;
+            --font-mono: 'Space Mono', 'Courier New', monospace;
+        }
+
+        /* --- 1. GENERAL STYLES --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--primary-bg);
+            color: var(--text-light);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: var(--neon-cyan);
+            font-family: var(--font-mono);
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.4);
+        }
+
+        /* --- 2. HEADER / HERO SECTION --- */
+        header {
+            text-align: center;
+            padding: 80px 20px 40px;
+            border-bottom: 2px solid var(--secondary-bg);
+        }
+
+        .status-badge {
+            display: inline-block;
+            background-color: var(--neon-pink);
+            color: var(--primary-bg);
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(255, 0, 255, 0.6);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 0 0 10px 0;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* --- 3. METADATA GRID (The Specs) --- */
+        .project-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 30px 0;
+            margin-bottom: 40px;
+            background-color: var(--secondary-bg);
+            padding: 30px 40px;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 0, 255, 0.2);
+        }
+
+        .meta-item h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: var(--neon-pink);
+            margin-bottom: 5px;
+        }
+
+        .meta-item p {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin: 0;
+            color: var(--text-light);
+        }
+
+        /* --- 4. MAIN CONTENT & STORY --- */
+        .project-story {
+            max-width: 900px;
+            margin: 0 auto 60px auto;
+        }
+
+        .project-story h2 {
+            margin-top: 40px;
+            font-size: 2rem;
+            border-left: 3px solid var(--neon-pink);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        .project-story p, .project-story ul {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            padding-left: 15px;
+        }
+        
+        .project-story ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .project-story li {
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+        
+        .project-story li::before {
+            content: '>';
+            color: var(--neon-cyan);
+            position: absolute;
+            left: 0;
+        }
+
+        /* --- 5. SCREENSHOT GALLERY --- */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr; 
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        @media (min-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+            .gallery-item:first-child {
+                grid-column: span 2;
+            }
+        }
+
+        .gallery-item {
+            background: var(--secondary-bg);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--neon-cyan);
+            margin-top: 10px;
+            font-family: var(--font-mono);
+        }
+
+        /* --- 6. FOOTER --- */
+        .back-link {
+            display: block;
+            text-align: center;
+            margin: 50px 0;
+            text-decoration: none;
+            color: var(--neon-pink);
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .back-link:hover {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 5px rgba(255, 0, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <span class="status-badge">ARCHIVED // CIVIC-TECH</span>
+            <h1>The Barangay Fix</h1>
+            <p class="tagline">Digitalizing Local Community Issue Reporting & Requests</p>
+        </header>
+
+        <section class="project-meta">
+            <div class="meta-item">
+                <h3>Role</h3>
+                <p>Full Stack Developer</p>
+            </div>
+            <div class="meta-item">
+                <h3>Platform</h3>
+                <p>ServiceNow (Custom App)</p>
+            </div>
+            <div class="meta-item">
+                <h3>Frontend Stack</h3>
+                <p>AngularJS, Bootstrap</p>
+            </div>
+            <div class="meta-item">
+                <h3>Status</h3>
+                <p>Discontinued</p>
+            </div>
+        </section>
+
+        <section class="project-story">
+            <h2>// CONTEXT: PROBLEM & OBJECTIVE</h2>
+            <p>The Barangay Fix was conceptualized to address the heavy reliance on manual, in-person processes at local government offices. This often led to long wait times, lost paperwork, and inefficiency in addressing community needs.</p>
+            
+            <h2>// SOLUTION EXECUTION</h2>
+            <p>The solution was a comprehensive web portal built directly on the **ServiceNow** platform. This leveraged ServiceNow's powerful workflow engine and security framework. The frontend was custom-built using **AngularJS** for dynamic functionality and **Bootstrap** for a mobile-responsive and familiar user interface.</p>
+            
+            <h3>KEY FEATURES</h3>
+            <ul>
+                <li>Resident Issue Reporting (Geo-location aware).</li>
+                <li>Automated ticket routing to relevant departments.</li>
+                <li>Digital document request and issuance tracking.</li>
+                <li>Official dashboard for managing ticket SLAs.</li>
+            </ul>
+        </section>
+
+        <section class="gallery">
+    
+            <div class="gallery-item">
+                <img src="/barangay-fix-images/landing-page-screenshot.png" alt="Barangay Fix Landing Page View"> 
+                <div class="caption">Login & Hero View</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/barangay-fix-images/dashboard-screenshot-1.png" alt="Dashboard View 1">
+                <div class="caption">Admin Panel Dashboard</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="/barangay-fix-images/dashboard-screenshot-2.png" alt="Dashboard View 2">
+                <div class="caption">Admin Panel Overview</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="/barangay-fix-images/form-screenshot-1.png" alt="Issue Submission Form Step 1">
+                <div class="caption">Submission Confirmation</div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="/barangay-fix-images/form-screenshot-2.png" alt="Confirmation Screen">
+                <div class="caption">Report Tracker</div>
+            </div>
+
+        </section>
+
+        <a href="index.html" class="back-link">← // RETURN TO PORTFOLIO //</a>
+
+    </div>
+
+</body>
+</html>
